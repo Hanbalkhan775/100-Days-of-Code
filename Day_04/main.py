@@ -23,14 +23,27 @@ scissors = '''    _______
       (____)
 ---.__(___)
 '''
-game = [rock, paper, scissors]
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for paper, 2 for Scissors.\n"))
-print(game[user_choice])
+# Rock wins against scissors.
+# Scissors win against paper.
+# Paper wins against rock.
+game_input = [rock, paper, scissors]
 
-computer_choice = random.choice(game)
-print(f"Computer Choice: \n{computer_choice}")
+user_input = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+computer_input = random.randint(a=0,b=1)
+if user_input >=0 and user_input <=2:
+    print(game_input[user_input])
+    print(f"computer choice: ")
+    print(game_input[computer_input])
 
-if user_choice == 0 and computer_choice == 2:
-    print("You Won!")
-
-elif user_choice == 
+if user_input > 2 and user_input < 0:
+    print("You have enter invalid number you lose!")
+elif user_input == 0 and computer_input == 2:
+    print("You Win!")
+elif computer_input == 0 and user_input == 2:
+    print("You loss!")
+elif user_input == computer_input:
+    print("It's a Draw!")
+elif user_input > computer_input:
+    print("You win!")
+elif computer_input > user_input:
+    print("computer win!")
