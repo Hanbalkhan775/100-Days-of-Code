@@ -23,9 +23,7 @@ scissors = '''    _______
       (____)
 ---.__(___)
 '''
-# Rock wins against scissors.
-# Scissors win against paper.
-# Paper wins against rock.
+
 game_input = [rock, paper, scissors]
 
 user_input = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
@@ -47,3 +45,4 @@ elif user_input > computer_input:
     print("You win!")
 elif computer_input > user_input:
     print("computer win!")
+    
