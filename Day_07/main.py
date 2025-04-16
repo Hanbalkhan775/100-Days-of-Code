@@ -1,6 +1,10 @@
 import random
-word_list = ["ardvark", "baboon", "camel"]
+from hangman_words import word_list
+from hangman_art import stages, logo
 
+
+
+lives = 6
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
@@ -28,6 +32,14 @@ while not game_over:
 
     print(display)
 
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            game_over = True
+            print("You lose.")
+
     if "_" not in display:
         game_over = True
         print("You win.")
+
+    print(stages[lives])
