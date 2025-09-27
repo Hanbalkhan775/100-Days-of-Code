@@ -1,0 +1,1 @@
+new_names = [name.title() for name in names if len(name) > 5]
